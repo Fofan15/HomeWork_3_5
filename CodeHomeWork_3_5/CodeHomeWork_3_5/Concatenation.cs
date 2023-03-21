@@ -9,11 +9,13 @@ namespace CodeHomeWork_3_5
 {
     public class Concatenation
     {
-        public static async Task ConcatenationMethod()
+        public static async Task<string> ConcatenationMethod()
         {
             string hello = null;
 
             string world = null;
+
+            string result = null;
 
             await Task.Run(async () => 
             {
@@ -29,10 +31,10 @@ namespace CodeHomeWork_3_5
 
                 await Task.WhenAll(HelloTask, WorldTask);
 
-                string result = $"{hello}  {world}";
-
-                Console.WriteLine(result);
+                result = $"{hello}  {world}";
             });
+
+            return result;
         }
     }
 }

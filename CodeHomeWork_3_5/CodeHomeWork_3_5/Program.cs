@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Concatenation.ConcatenationMethod();
+            Console.WriteLine(Concatenation.ConcatenationMethod().Result);
         }
     }
 }
